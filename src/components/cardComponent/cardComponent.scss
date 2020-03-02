@@ -1,0 +1,72 @@
+.flipContainer {
+  width: 21rem;
+  height: 14rem;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #ffffff;
+  font-family: 'Dosis';
+  perspective: 600px;
+}
+
+.flipCard {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.flippedCard{
+  transform: rotateY(180deg);
+}
+
+.cardHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem 0.5rem 1rem;
+
+    .cardBand{
+        background: black;
+        width: 100%;
+        height: 3rem
+    }
+}
+
+.cardFooter{
+    padding: 0 1rem;
+}
+
+.cardFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-image: url('../../assets/img/cardBackground.jpg');
+  background-position: left;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.frontCardFace {
+  background-image: url('../../assets/img/cardBackground.jpg');
+  background-position: left;
+}
+
+.backCardFace {
+  transform: rotateY(180deg);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

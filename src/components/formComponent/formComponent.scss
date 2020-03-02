@@ -1,0 +1,74 @@
+.formContainer{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    min-width: 25%;
+}
+
+.formLabel{
+    display: inline-block;
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+}
+
+.formControl{
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: .8rem;
+
+    &--primary{
+        @extend %primaryTheme;
+    }
+
+    &--transparent{
+        @extend %transparentTheme;
+    }
+}
+
+%primaryTheme{
+    background-color: white;
+    border: 1px solid lightgray;
+    color: navy;
+    font-family: 'Roboto';
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+%transparentTheme{
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: 'Dosis';
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    outline: none;
+}
+
+.button{
+    font-weight: 400;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: .25rem;
+
+    &--primary{
+        @extend %primaryButton
+    }
+}
+
+%primaryButton{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
